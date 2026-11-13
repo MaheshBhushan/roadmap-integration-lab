@@ -1,0 +1,37 @@
+{
+  "snapshot_date": "2026-11-13",
+  "acquired_at": "2026-11-13T22:41:57+00:00",
+  "region": {
+    "name": "bremen-mitte",
+    "bbox": [
+      8.78,
+      53.065,
+      8.83,
+      53.09
+    ],
+    "crs": "EPSG:4326"
+  },
+  "sources": {
+    "osm": {
+      "provider": "Geofabrik",
+      "license": "ODbL-1.0",
+      "requested_url": "https://download.geofabrik.de/europe/germany/bremen-latest.osm.pbf",
+      "resolved_url": "https://download.geofabrik.de/europe/germany/bremen-261112.osm.pbf",
+      "file": "osm/bremen-261112.osm.pbf",
+      "bytes": 21273423,
+      "sha256": "ec253a2e6fe73f6d007d2f8c0a44b6e510c18907884d33e548828af499783ed6",
+      "replication_timestamp": "2026-11-12T21:23:05Z"
+    },
+    "overture": {
+      "provider": "Overture Maps Foundation",
+      "license": "ODbL-1.0 (transportation theme)",
+      "release": "2026-10-21.0",
+      "theme": "transportation",
+      "type": "segment",
+      "file": "overture/segments.parquet",
+      "rows": 5210,
+      "bytes": 1556182,
+      "sha256": "172463fb3b4ab8d6593ee3fd5e30cfaf61d145fb78ad07bdcf01a1686c67fc96"
+    }
+  }
+}

@@ -1,0 +1,585 @@
+{
+  "coverage": {
+    "tolerance_m": 10.0,
+    "sources": {
+      "osm": {
+        "segments": 6177,
+        "length_km": 343.658,
+        "covered_km": 341.764,
+        "classes": {
+          "service": {
+            "segments": 1543,
+            "length_km": 74.969,
+            "covered_ratio": 0.9978
+          },
+          "residential": {
+            "segments": 634,
+            "length_km": 59.933,
+            "covered_ratio": 1.0
+          },
+          "path": {
+            "segments": 857,
+            "length_km": 57.394,
+            "covered_ratio": 0.997
+          },
+          "footway": {
+            "segments": 1276,
+            "length_km": 42.956,
+            "covered_ratio": 0.9966
+          },
+          "secondary": {
+            "segments": 488,
+            "length_km": 27.571,
+            "covered_ratio": 1.0
+          },
+          "pedestrian": {
+            "segments": 237,
+            "length_km": 16.5,
+            "covered_ratio": 0.9149
+          },
+          "tertiary": {
+            "segments": 249,
+            "length_km": 16.36,
+            "covered_ratio": 1.0
+          },
+          "trunk": {
+            "segments": 141,
+            "length_km": 14.144,
+            "covered_ratio": 1.0
+          },
+          "unclassified": {
+            "segments": 142,
+            "length_km": 13.478,
+            "covered_ratio": 1.0
+          },
+          "primary": {
+            "segments": 153,
+            "length_km": 8.141,
+            "covered_ratio": 1.0
+          },
+          "cycleway": {
+            "segments": 146,
+            "length_km": 8.094,
+            "covered_ratio": 1.0
+          },
+          "steps": {
+            "segments": 277,
+            "length_km": 1.764,
+            "covered_ratio": 0.9979
+          },
+          "living_street": {
+            "segments": 28,
+            "length_km": 1.599,
+            "covered_ratio": 1.0
+          },
+          "track": {
+            "segments": 6,
+            "length_km": 0.757,
+            "covered_ratio": 1.0
+          }
+        },
+        "covered_ratio": 0.9945
+      },
+      "overture": {
+        "segments": 4772,
+        "length_km": 336.502,
+        "covered_km": 335.3,
+        "classes": {
+          "service": {
+            "segments": 1093,
+            "length_km": 74.481,
+            "covered_ratio": 1.0
+          },
+          "residential": {
+            "segments": 652,
+            "length_km": 59.933,
+            "covered_ratio": 1.0
+          },
+          "path": {
+            "segments": 690,
+            "length_km": 57.016,
+            "covered_ratio": 0.9995
+          },
+          "footway": {
+            "segments": 1015,
+            "length_km": 42.227,
+            "covered_ratio": 0.9996
+          },
+          "secondary": {
+            "segments": 289,
+            "length_km": 27.571,
+            "covered_ratio": 1.0
+          },
+          "tertiary": {
+            "segments": 217,
+            "length_km": 16.36,
+            "covered_ratio": 1.0
+          },
+          "trunk": {
+            "segments": 51,
+            "length_km": 14.144,
+            "covered_ratio": 1.0
+          },
+          "unclassified": {
+            "segments": 124,
+            "length_km": 13.478,
+            "covered_ratio": 1.0
+          },
+          "pedestrian": {
+            "segments": 134,
+            "length_km": 9.386,
+            "covered_ratio": 1.0
+          },
+          "primary": {
+            "segments": 89,
+            "length_km": 8.141,
+            "covered_ratio": 1.0
+          },
+          "cycleway": {
+            "segments": 98,
+            "length_km": 8.049,
+            "covered_ratio": 1.0
+          },
+          "steps": {
+            "segments": 271,
+            "length_km": 1.754,
+            "covered_ratio": 1.0
+          },
+          "unknown": {
+            "segments": 27,
+            "length_km": 1.607,
+            "covered_ratio": 0.2803
+          },
+          "living_street": {
+            "segments": 16,
+            "length_km": 1.599,
+            "covered_ratio": 1.0
+          },
+          "track": {
+            "segments": 6,
+            "length_km": 0.757,
+            "covered_ratio": 1.0
+          }
+        },
+        "covered_ratio": 0.9964
+      }
+    }
+  },
+  "attribute_fill": {
+    "osm": {
+      "drivable_km": 216.194,
+      "maxspeed_share": 0.6588,
+      "oneway_share": 0.4783,
+      "motor_access_share": 0.176
+    },
+    "overture": {
+      "drivable_km": 215.706,
+      "maxspeed_share": 0.6283,
+      "oneway_share": 0.4632,
+      "motor_access_share": 0.1488
+    }
+  },
+  "linkage": {
+    "overture_segments": 4772,
+    "overture_without_osm_ref": 27,
+    "overture_distinct_osm_ways": 4425,
+    "osm_ways": 6177,
+    "osm_ways_referenced_by_overture": 4394,
+    "referenced_ways_present_in_osm": 4394,
+    "pairs_same_version": 4652,
+    "pairs_osm_newer": 62,
+    "pairs_overture_newer": 0
+  },
+  "restrictions": {
+    "pairs": 4714,
+    "pairs_with_partial_rules": 278,
+    "attributes": {
+      "road_class": {
+        "all": {
+          "agree": 4435,
+          "disagree": 1
+        },
+        "same_osm_version": {
+          "agree": 4375
+        },
+        "different_osm_version": {
+          "agree": 60,
+          "disagree": 1
+        },
+        "agreement_when_both_present": 0.9998,
+        "examples": [
+          {
+            "overture_id": "06361733-3cdc-42cb-8e20-64f17baef6cc",
+            "osm_way_id": 509317309,
+            "same_version": false,
+            "osm": "footway",
+            "overture": "path",
+            "osm_tag": null
+          }
+        ]
+      },
+      "maxspeed_kmh": {
+        "all": {
+          "neither": 3107,
+          "agree": 1328,
+          "osm_only": 1
+        },
+        "same_osm_version": {
+          "neither": 3090,
+          "agree": 1285
+        },
+        "different_osm_version": {
+          "agree": 43,
+          "neither": 17,
+          "osm_only": 1
+        },
+        "agreement_when_both_present": 1.0,
+        "examples": [
+          {
+            "overture_id": "0a6e12cf-be3f-47bc-9ade-789060d2f9b4",
+            "osm_way_id": 262455587,
+            "same_version": false,
+            "osm": 30.0,
+            "overture": null,
+            "osm_tag": "30"
+          }
+        ]
+      },
+      "oneway": {
+        "all": {
+          "agree": 4429,
+          "disagree": 7
+        },
+        "same_osm_version": {
+          "agree": 4368,
+          "disagree": 7
+        },
+        "different_osm_version": {
+          "agree": 61
+        },
+        "agreement_when_both_present": 0.9984,
+        "examples": [
+          {
+            "overture_id": "2310dbbb-861f-43c1-8069-01679e386d50",
+            "osm_way_id": 1100584176,
+            "same_version": true,
+            "osm": "forward",
+            "overture": "both",
+            "osm_tag": null
+          },
+          {
+            "overture_id": "23a4f580-4dc7-4e90-83b9-e0af60373569",
+            "osm_way_id": 71010319,
+            "same_version": true,
+            "osm": "forward",
+            "overture": "both",
+            "osm_tag": null
+          },
+          {
+            "overture_id": "2f7fbc17-89a5-464f-88b5-5343e75afac7",
+            "osm_way_id": 1043091779,
+            "same_version": true,
+            "osm": "forward",
+            "overture": "both",
+            "osm_tag": "yes"
+          },
+          {
+            "overture_id": "43829201-93aa-4ddc-a167-99440f4bcb38",
+            "osm_way_id": 4245283,
+            "same_version": true,
+            "osm": "forward",
+            "overture": "both",
+            "osm_tag": null
+          },
+          {
+            "overture_id": "5c3ed980-a5b1-40b6-b7b7-46db15e24727",
+            "osm_way_id": 4245283,
+            "same_version": true,
+            "osm": "forward",
+            "overture": "both",
+            "osm_tag": null
+          },
+          {
+            "overture_id": "9daeac7d-fac1-450b-8cda-2ce060882237",
+            "osm_way_id": 4245283,
+            "same_version": true,
+            "osm": "forward",
+            "overture": "both",
+            "osm_tag": null
+          },
+          {
+            "overture_id": "db5f0060-02af-4b42-b2bd-1d0d9793ecb9",
+            "osm_way_id": 4245283,
+            "same_version": true,
+            "osm": "forward",
+            "overture": "both",
+            "osm_tag": null
+          }
+        ]
+      },
+      "motor_access": {
+        "all": {
+          "neither": 3983,
+          "agree": 437,
+          "osm_only": 16
+        },
+        "same_osm_version": {
+          "neither": 3925,
+          "agree": 434,
+          "osm_only": 16
+        },
+        "different_osm_version": {
+          "neither": 58,
+          "agree": 3
+        },
+        "agreement_when_both_present": 1.0,
+        "examples": [
+          {
+            "overture_id": "04596df0-aacb-4f19-8117-7ddc57a69936",
+            "osm_way_id": 188490817,
+            "same_version": true,
+            "osm": "allowed",
+            "overture": null,
+            "osm_tag": "permissive"
+          },
+          {
+            "overture_id": "063ef7e2-dd77-450f-8567-b2229116d0cc",
+            "osm_way_id": 531950148,
+            "same_version": true,
+            "osm": "allowed",
+            "overture": null,
+            "osm_tag": "permissive"
+          },
+          {
+            "overture_id": "22123ec5-fef9-4d3f-9198-25728ae93b99",
+            "osm_way_id": 215504369,
+            "same_version": true,
+            "osm": "other",
+            "overture": null,
+            "osm_tag": "unknown"
+          },
+          {
+            "overture_id": "46a7389e-c86a-4031-80b9-e22d652c7313",
+            "osm_way_id": 99756461,
+            "same_version": true,
+            "osm": "allowed",
+            "overture": null,
+            "osm_tag": "permissive"
+          },
+          {
+            "overture_id": "5083f8de-9e61-4b1a-aa8b-f4900da4b7bc",
+            "osm_way_id": 25004261,
+            "same_version": true,
+            "osm": "other",
+            "overture": null,
+            "osm_tag": "restricted"
+          },
+          {
+            "overture_id": "5934bc8f-ad37-4285-ba71-d98402402c3a",
+            "osm_way_id": 256460809,
+            "same_version": true,
+            "osm": "allowed",
+            "overture": null,
+            "osm_tag": "permissive"
+          },
+          {
+            "overture_id": "6f0492d2-0fe1-4987-8f39-19875b6cadb5",
+            "osm_way_id": 812522215,
+            "same_version": true,
+            "osm": "allowed",
+            "overture": null,
+            "osm_tag": "permissive"
+          },
+          {
+            "overture_id": "83f8e546-2734-4ff8-8440-2cc1209607a8",
+            "osm_way_id": 184724896,
+            "same_version": true,
+            "osm": "allowed",
+            "overture": null,
+            "osm_tag": "permissive"
+          }
+        ]
+      }
+    }
+  },
+  "schema_profile": {
+    "osm_ways": {
+      "rows": 6177,
+      "columns": [
+        {
+          "column": "way_id",
+          "type": "bigint",
+          "filled_share": 1.0
+        },
+        {
+          "column": "version",
+          "type": "integer",
+          "filled_share": 1.0
+        },
+        {
+          "column": "osm_timestamp",
+          "type": "timestamp with time zone",
+          "filled_share": 1.0
+        },
+        {
+          "column": "highway",
+          "type": "text",
+          "filled_share": 1.0
+        },
+        {
+          "column": "tags",
+          "type": "jsonb",
+          "filled_share": 1.0
+        },
+        {
+          "column": "geom",
+          "type": "geometry",
+          "filled_share": 1.0
+        }
+      ]
+    },
+    "overture_segments": {
+      "rows": 4772,
+      "columns": [
+        {
+          "column": "id",
+          "type": "text",
+          "filled_share": 1.0
+        },
+        {
+          "column": "version",
+          "type": "integer",
+          "filled_share": 1.0
+        },
+        {
+          "column": "subtype",
+          "type": "text",
+          "filled_share": 1.0
+        },
+        {
+          "column": "class",
+          "type": "text",
+          "filled_share": 1.0
+        },
+        {
+          "column": "subclass",
+          "type": "text",
+          "filled_share": 0.1618
+        },
+        {
+          "column": "names",
+          "type": "jsonb",
+          "filled_share": 0.387
+        },
+        {
+          "column": "connectors",
+          "type": "jsonb",
+          "filled_share": 1.0
+        },
+        {
+          "column": "road_surface",
+          "type": "jsonb",
+          "filled_share": 0.8963
+        },
+        {
+          "column": "road_flags",
+          "type": "jsonb",
+          "filled_share": 0.0993
+        },
+        {
+          "column": "width_rules",
+          "type": "jsonb",
+          "filled_share": 0.0909
+        },
+        {
+          "column": "level_rules",
+          "type": "jsonb",
+          "filled_share": 0.0335
+        },
+        {
+          "column": "access_restrictions",
+          "type": "jsonb",
+          "filled_share": 0.4776
+        },
+        {
+          "column": "speed_limits",
+          "type": "jsonb",
+          "filled_share": 0.306
+        },
+        {
+          "column": "prohibited_transitions",
+          "type": "jsonb",
+          "filled_share": 0.0323
+        },
+        {
+          "column": "destinations",
+          "type": "jsonb",
+          "filled_share": 0.0176
+        },
+        {
+          "column": "routes",
+          "type": "jsonb",
+          "filled_share": 0.0113
+        },
+        {
+          "column": "sources",
+          "type": "jsonb",
+          "filled_share": 1.0
+        },
+        {
+          "column": "geom",
+          "type": "geometry",
+          "filled_share": 1.0
+        }
+      ]
+    },
+    "osm_tag_fill": {
+      "highway": 1.0,
+      "surface": 0.8817,
+      "lit": 0.717,
+      "name": 0.3858,
+      "oneway": 0.318,
+      "maxspeed": 0.2982,
+      "sidewalk": 0.2231,
+      "lanes": 0.1867,
+      "access": 0.0911,
+      "width": 0.0848,
+      "oneway:bicycle": 0.0573,
+      "tunnel": 0.0452,
+      "layer": 0.0337,
+      "bridge": 0.0178,
+      "cycleway": 0.0159,
+      "motor_vehicle": 0.0104,
+      "vehicle": 0.0094,
+      "motorcar": 0.0091,
+      "maxspeed:conditional": 0.0063,
+      "junction": 0.005
+    },
+    "osm_distinct_tag_keys": 363
+  },
+  "intake": {
+    "osm_highway_ways_bbox_overlap": 6342,
+    "osm_excluded_non_road_highway": {
+      "platform": 80,
+      "corridor": 62,
+      "elevator": 18,
+      "disused:footway": 2,
+      "services": 1,
+      "construction": 1
+    },
+    "osm_missing_node_locations": 0,
+    "overture_rows": 5210,
+    "overture_excluded_subtypes": {
+      "rail": 433,
+      "water": 2
+    },
+    "dropped_envelope_only": {
+      "osm": 1,
+      "overture": 3
+    },
+    "segments": {
+      "osm": 6177,
+      "overture": 4772
+    }
+  }
+}

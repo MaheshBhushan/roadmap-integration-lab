@@ -1,0 +1,190 @@
+{
+  "passed": true,
+  "published": true,
+  "checks": [
+    {
+      "name": "snapshot_sha256_osm",
+      "stage": "snapshot",
+      "passed": true,
+      "observed": "ec253a2e6fe73f6d007d2f8c0a44b6e510c18907884d33e548828af499783ed6",
+      "expected": "sha256 recorded in manifest (ec253a2e6fe7...)",
+      "detail": []
+    },
+    {
+      "name": "snapshot_sha256_overture",
+      "stage": "snapshot",
+      "passed": true,
+      "observed": "172463fb3b4ab8d6593ee3fd5e30cfaf61d145fb78ad07bdcf01a1686c67fc96",
+      "expected": "sha256 recorded in manifest (172463fb3b4a...)",
+      "detail": []
+    },
+    {
+      "name": "coordinates_finite",
+      "stage": "python",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 segments with NaN/inf",
+      "detail": []
+    },
+    {
+      "name": "coordinates_lonlat_range",
+      "stage": "python",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 segments outside lon [-180,180] / lat [-90,90]",
+      "detail": []
+    },
+    {
+      "name": "coordinates_in_region",
+      "stage": "python",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 segments with vertices outside bbox +/- 0.05 deg (axis order / CRS mix-up)",
+      "detail": []
+    },
+    {
+      "name": "vertex_count",
+      "stage": "python",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 segments with < 2 vertices",
+      "detail": []
+    },
+    {
+      "name": "min_segments_osm",
+      "stage": "python",
+      "passed": true,
+      "observed": 6177,
+      "expected": ">= 10",
+      "detail": []
+    },
+    {
+      "name": "min_segments_overture",
+      "stage": "python",
+      "passed": true,
+      "observed": 4772,
+      "expected": ">= 10",
+      "detail": []
+    },
+    {
+      "name": "pg_srid_4326",
+      "stage": "postgis",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 geometries with SRID other than 4326",
+      "detail": []
+    },
+    {
+      "name": "pg_geometry_type",
+      "stage": "postgis",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 non-LineString geometries",
+      "detail": []
+    },
+    {
+      "name": "pg_geometry_valid",
+      "stage": "postgis",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 geometries failing ST_IsValid",
+      "detail": []
+    },
+    {
+      "name": "pg_non_degenerate",
+      "stage": "postgis",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 empty or zero-length geometries",
+      "detail": []
+    },
+    {
+      "name": "pg_within_region",
+      "stage": "postgis",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 geometries outside bbox +/- 0.05 deg",
+      "detail": []
+    },
+    {
+      "name": "pg_intersects_region",
+      "stage": "postgis",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 geometries not touching the region bbox",
+      "detail": []
+    },
+    {
+      "name": "pg_crs_roundtrip",
+      "stage": "postgis",
+      "passed": true,
+      "observed": 0.0,
+      "expected": "<= 0.01 m drift after EPSG:4326 -> EPSG:25832 -> EPSG:4326",
+      "detail": []
+    },
+    {
+      "name": "pg_row_counts",
+      "stage": "postgis",
+      "passed": true,
+      "observed": {
+        "osm_ways": 6177,
+        "overture_segments": 4772,
+        "road_segments": 10949
+      },
+      "expected": "equal to rows written {'osm_ways': 6177, 'overture_segments': 4772, 'road_segments': 10949}",
+      "detail": []
+    },
+    {
+      "name": "mongo_rejected_documents",
+      "stage": "mongodb",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 documents rejected by $jsonSchema / 2dsphere indexing",
+      "detail": []
+    },
+    {
+      "name": "mongo_matches_postgis",
+      "stage": "mongodb",
+      "passed": true,
+      "observed": {
+        "mongodb": [
+          10949,
+          "87f7a49f1563ea23907a6289462a33bd"
+        ],
+        "postgis": [
+          10949,
+          "87f7a49f1563ea23907a6289462a33bd"
+        ]
+      },
+      "expected": "same segment count and id-set md5 in MongoDB and PostGIS",
+      "detail": []
+    },
+    {
+      "name": "mongo_geo_intersects_region",
+      "stage": "mongodb",
+      "passed": true,
+      "observed": {
+        "intersecting": 10949,
+        "total": 10949
+      },
+      "expected": "every document found by a 2dsphere $geoIntersects query on the region",
+      "detail": []
+    },
+    {
+      "name": "coverage_osm",
+      "stage": "comparison",
+      "passed": true,
+      "observed": 0.9945,
+      "expected": ">= 0.75 of osm length within 10.0 m of the other source",
+      "detail": []
+    },
+    {
+      "name": "coverage_overture",
+      "stage": "comparison",
+      "passed": true,
+      "observed": 0.9964,
+      "expected": ">= 0.75 of overture length within 10.0 m of the other source",
+      "detail": []
+    }
+  ]
+}

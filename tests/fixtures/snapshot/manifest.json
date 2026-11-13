@@ -1,0 +1,39 @@
+{
+  "snapshot_date": "2026-11-13",
+  "acquired_at": "2026-11-13T19:47:07+00:00",
+  "region": {
+    "name": "fixture-bremen-marktplatz",
+    "bbox": [
+      8.805,
+      53.074,
+      8.812,
+      53.078
+    ],
+    "crs": "EPSG:4326"
+  },
+  "sources": {
+    "osm": {
+      "provider": "Geofabrik",
+      "license": "ODbL-1.0",
+      "requested_url": "https://download.geofabrik.de/europe/germany/bremen-latest.osm.pbf",
+      "resolved_url": "https://download.geofabrik.de/europe/germany/bremen-261112.osm.pbf",
+      "file": "osm/fixture.osm",
+      "bytes": 320549,
+      "sha256": "85c3365dc0e29fa0c497e9e087f7055e2ed726fe3cfa4da4e9434a3ddfb71677",
+      "replication_timestamp": "2026-11-12T21:23:05Z",
+      "cut_from": "osm/bremen-261112.osm.pbf"
+    },
+    "overture": {
+      "provider": "Overture Maps Foundation",
+      "license": "ODbL-1.0 (transportation theme)",
+      "release": "2026-10-21.0",
+      "theme": "transportation",
+      "type": "segment",
+      "file": "overture/segments.parquet",
+      "rows": 257,
+      "bytes": 108879,
+      "sha256": "6ddd903c383856266b40ef1a6449b0074f3e49805a3e0e0fa27861ad44e84582",
+      "cut_from": "overture/segments.parquet"
+    }
+  }
+}

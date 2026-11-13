@@ -1,0 +1,42 @@
+[project]
+name = "roadlab"
+version = "0.1.0"
+description = "Compare OpenStreetMap (Geofabrik) and Overture Maps road segments in PostGIS and MongoDB with validated publication"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Koduri Mahesh Bhushan Chowdary", email = "mkoduri73@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "osmium>=4.3.2",
+    "overturemaps>=2.1.1",
+    "psycopg[binary]>=3.3.8",
+    "pyarrow>=26.0.1",
+    "pymongo>=4.19.0",
+    "requests>=2.34.2",
+    "shapely>=2.2.0",
+]
+
+[project.scripts]
+roadlab = "roadlab.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.24,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["db: needs the PostGIS and MongoDB services (see docker-compose.yml)"]

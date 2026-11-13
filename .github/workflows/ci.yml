@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgis:
+        image: postgis/postgis:16-3.4
+        env:
+          POSTGRES_USER: roadlab
+          POSTGRES_PASSWORD: roadlab
+          POSTGRES_DB: roadlab
+        ports: ["55433:5432"]
+        options: >-
+          --health-cmd "pg_isready -U roadlab -d roadlab"
+          --health-interval 2s --health-timeout 3s --health-retries 30
+      mongo:
+        image: mongo:7.0
+        ports: ["57018:27017"]
+        options: >-
+          --health-cmd "mongosh --quiet --eval 'db.adminCommand(\"ping\").ok'"
+          --health-interval 2s --health-timeout 5s --health-retries 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: uv run ruff check .
+      - run: uv run pytest -v

@@ -1,0 +1,96 @@
+{
+  "total_seconds": 61.476,
+  "peak_rss_mib": 637.3,
+  "per_stage_reset": true,
+  "stages": [
+    {
+      "stage": "acquire_snapshot",
+      "seconds": 22.856,
+      "rss_start_mib": 108.1,
+      "rss_end_mib": 537.0,
+      "peak_rss_mib": 537.0
+    },
+    {
+      "stage": "snapshot_integrity",
+      "seconds": 0.135,
+      "rss_start_mib": 537.0,
+      "rss_end_mib": 537.0,
+      "peak_rss_mib": 537.0
+    },
+    {
+      "stage": "read_osm_pbf",
+      "seconds": 6.566,
+      "rss_start_mib": 537.0,
+      "rss_end_mib": 563.0,
+      "peak_rss_mib": 637.3
+    },
+    {
+      "stage": "read_overture_parquet",
+      "seconds": 2.256,
+      "rss_start_mib": 563.0,
+      "rss_end_mib": 494.5,
+      "peak_rss_mib": 562.3
+    },
+    {
+      "stage": "coordinate_checks",
+      "seconds": 0.296,
+      "rss_start_mib": 494.9,
+      "rss_end_mib": 494.9,
+      "peak_rss_mib": 494.9
+    },
+    {
+      "stage": "load_postgis",
+      "seconds": 4.58,
+      "rss_start_mib": 498.1,
+      "rss_end_mib": 500.5,
+      "peak_rss_mib": 500.5
+    },
+    {
+      "stage": "postgis_checks",
+      "seconds": 0.827,
+      "rss_start_mib": 500.5,
+      "rss_end_mib": 500.5,
+      "peak_rss_mib": 500.5
+    },
+    {
+      "stage": "load_mongodb",
+      "seconds": 2.207,
+      "rss_start_mib": 500.5,
+      "rss_end_mib": 525.2,
+      "peak_rss_mib": 532.4
+    },
+    {
+      "stage": "mongodb_checks",
+      "seconds": 0.248,
+      "rss_start_mib": 525.2,
+      "rss_end_mib": 525.3,
+      "peak_rss_mib": 525.3
+    },
+    {
+      "stage": "compare_sources",
+      "seconds": 19.143,
+      "rss_start_mib": 525.3,
+      "rss_end_mib": 525.3,
+      "peak_rss_mib": 525.3
+    },
+    {
+      "stage": "publish",
+      "seconds": 0.352,
+      "rss_start_mib": 525.3,
+      "rss_end_mib": 525.3,
+      "peak_rss_mib": 525.3
+    }
+  ],
+  "storage": {
+    "postgis_staging_bytes": {
+      "osm_ways": 2809856,
+      "overture_segments": 6438912,
+      "road_segments": 4046848
+    },
+    "mongodb_staging": {
+      "data": 11804500,
+      "storage": 4096,
+      "indexes": 12288
+    }
+  }
+}
