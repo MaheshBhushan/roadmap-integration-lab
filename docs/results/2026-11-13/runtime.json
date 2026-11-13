@@ -1,91 +1,91 @@
 {
-  "total_seconds": 61.476,
-  "peak_rss_mib": 637.3,
+  "total_seconds": 82.576,
+  "peak_rss_mib": 520.1,
   "per_stage_reset": true,
   "stages": [
     {
       "stage": "acquire_snapshot",
-      "seconds": 22.856,
-      "rss_start_mib": 108.1,
-      "rss_end_mib": 537.0,
-      "peak_rss_mib": 537.0
+      "seconds": 42.774,
+      "rss_start_mib": 102.8,
+      "rss_end_mib": 367.9,
+      "peak_rss_mib": 511.4
     },
     {
       "stage": "snapshot_integrity",
-      "seconds": 0.135,
-      "rss_start_mib": 537.0,
-      "rss_end_mib": 537.0,
-      "peak_rss_mib": 537.0
+      "seconds": 0.049,
+      "rss_start_mib": 367.9,
+      "rss_end_mib": 367.9,
+      "peak_rss_mib": 367.9
     },
     {
       "stage": "read_osm_pbf",
-      "seconds": 6.566,
-      "rss_start_mib": 537.0,
-      "rss_end_mib": 563.0,
-      "peak_rss_mib": 637.3
+      "seconds": 7.839,
+      "rss_start_mib": 367.9,
+      "rss_end_mib": 445.8,
+      "peak_rss_mib": 475.0
     },
     {
       "stage": "read_overture_parquet",
-      "seconds": 2.256,
-      "rss_start_mib": 563.0,
-      "rss_end_mib": 494.5,
-      "peak_rss_mib": 562.3
+      "seconds": 1.489,
+      "rss_start_mib": 445.8,
+      "rss_end_mib": 482.2,
+      "peak_rss_mib": 482.4
     },
     {
       "stage": "coordinate_checks",
-      "seconds": 0.296,
-      "rss_start_mib": 494.9,
-      "rss_end_mib": 494.9,
-      "peak_rss_mib": 494.9
+      "seconds": 0.172,
+      "rss_start_mib": 482.7,
+      "rss_end_mib": 482.7,
+      "peak_rss_mib": 482.7
     },
     {
       "stage": "load_postgis",
-      "seconds": 4.58,
-      "rss_start_mib": 498.1,
-      "rss_end_mib": 500.5,
-      "peak_rss_mib": 500.5
+      "seconds": 2.493,
+      "rss_start_mib": 485.6,
+      "rss_end_mib": 486.8,
+      "peak_rss_mib": 486.8
     },
     {
       "stage": "postgis_checks",
-      "seconds": 0.827,
-      "rss_start_mib": 500.5,
-      "rss_end_mib": 500.5,
-      "peak_rss_mib": 500.5
+      "seconds": 0.904,
+      "rss_start_mib": 486.8,
+      "rss_end_mib": 486.8,
+      "peak_rss_mib": 486.8
     },
     {
       "stage": "load_mongodb",
-      "seconds": 2.207,
-      "rss_start_mib": 500.5,
-      "rss_end_mib": 525.2,
-      "peak_rss_mib": 532.4
+      "seconds": 1.329,
+      "rss_start_mib": 486.8,
+      "rss_end_mib": 513.9,
+      "peak_rss_mib": 520.1
     },
     {
       "stage": "mongodb_checks",
-      "seconds": 0.248,
-      "rss_start_mib": 525.2,
-      "rss_end_mib": 525.3,
-      "peak_rss_mib": 525.3
+      "seconds": 0.217,
+      "rss_start_mib": 513.9,
+      "rss_end_mib": 514.0,
+      "peak_rss_mib": 514.0
     },
     {
       "stage": "compare_sources",
-      "seconds": 19.143,
-      "rss_start_mib": 525.3,
-      "rss_end_mib": 525.3,
-      "peak_rss_mib": 525.3
+      "seconds": 20.883,
+      "rss_start_mib": 514.0,
+      "rss_end_mib": 513.9,
+      "peak_rss_mib": 513.9
     },
     {
       "stage": "publish",
-      "seconds": 0.352,
-      "rss_start_mib": 525.3,
-      "rss_end_mib": 525.3,
-      "peak_rss_mib": 525.3
+      "seconds": 0.289,
+      "rss_start_mib": 513.9,
+      "rss_end_mib": 514.0,
+      "peak_rss_mib": 514.0
     }
   ],
   "storage": {
     "postgis_staging_bytes": {
-      "osm_ways": 2809856,
-      "overture_segments": 6438912,
-      "road_segments": 4046848
+      "osm_ways": 2564096,
+      "overture_segments": 6447104,
+      "road_segments": 3874816
     },
     "mongodb_staging": {
       "data": 11804500,

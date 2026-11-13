@@ -103,4 +103,4 @@ def render(manifest: dict[str, Any], validation: dict[str, Any], comparison: dic
     out.append("\nStaging size: PostGIS (table + indexes + TOAST) " + ", ".join(
         f"{k} {v / 2**20:.2f} MiB" for k, v in st["postgis_staging_bytes"].items())
         + f"; MongoDB uncompressed BSON {st['mongodb_staging']['data'] / 2**20:.2f} MiB.\n")
-    return "\n".join(x.strip("\n") for x in out) + "\n"
+    return "\n\n".join(x.strip("\n") for x in out) + "\n"

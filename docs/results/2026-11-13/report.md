@@ -1,9 +1,15 @@
 # Snapshot 2026-11-13 - bremen-mitte
+
 Region bbox (EPSG:4326): `[8.78, 53.065, 8.83, 53.09]`
+
 - OSM: Geofabrik `osm/bremen-261112.osm.pbf`, replication timestamp 2026-11-12T21:23:05Z, 21,273,423 bytes
+
 - Overture: release `2026-10-21.0`, 5,210 segment rows, 1,556,182 bytes
+
 **Validation passed; published.**
+
 ## Validation checks
+
 | check | stage | result | observed | expected |
 |---|---|---|---|---|
 | snapshot_sha256_osm | snapshot | pass | ec253a2e6fe73f6d007d2f8c0a44b6e510c18907884d33e548828af499783ed6 | sha256 recorded in manifest (ec253a2e6fe7...) |
@@ -29,6 +35,7 @@ Region bbox (EPSG:4326): `[8.78, 53.065, 8.83, 53.09]`
 | coverage_overture | comparison | pass | 0.9964 | >= 0.75 of overture length within 10.0 m of the other source |
 
 ## Intake
+
 | item | value |
 |---|---|
 | osm_highway_ways_bbox_overlap | 6342 |
@@ -40,6 +47,7 @@ Region bbox (EPSG:4326): `[8.78, 53.065, 8.83, 53.09]`
 | segments | {'osm': 6177, 'overture': 4772} |
 
 ## Coverage (length within 10.0 m of the other source, clipped to bbox)
+
 | source | segments | length km | covered km | covered |
 |---|---|---|---|---|
 | osm | 6177 | 343.658 | 341.764 | 99.5% |
@@ -66,12 +74,14 @@ Per road class:
 | unknown | - | - | 1.607 | 28.0% |
 
 ## Restriction attribute fill (share of drivable-road length)
+
 | source | drivable km | maxspeed | oneway (directional) | motor access tagged |
 |---|---|---|---|---|
 | osm | 216.194 | 65.9% | 47.8% | 17.6% |
 | overture | 215.706 | 62.8% | 46.3% | 14.9% |
 
 ## Linkage via Overture `sources[].record_id`
+
 | item | value |
 |---|---|
 | overture_segments | 4772 |
@@ -85,6 +95,7 @@ Per road class:
 | pairs_overture_newer | 0 |
 
 ## Restriction comparison on 4,714 (Overture segment, source OSM way) pairs
+
 278 pairs with partial (`between`) rules excluded.
 
 | attribute | agree | disagree | OSM only | Overture only | neither | agreement | disagree w/ newer OSM version |
@@ -132,6 +143,7 @@ Examples for `motor_access`:
 | 83f8e546-2734-4ff8-8440-2cc1209607a8 | 184724896 | True | allowed | - | permissive |
 
 ## Source schema: `osm_ways` (6,177 rows)
+
 | column | type | non-empty |
 |---|---|---|
 | way_id | bigint | 100.0% |
@@ -142,6 +154,7 @@ Examples for `motor_access`:
 | geom | geometry | 100.0% |
 
 ## Source schema: `overture_segments` (4,772 rows)
+
 | column | type | non-empty |
 |---|---|---|
 | id | text | 100.0% |
@@ -189,20 +202,21 @@ OSM tag keys on highway ways: 363 distinct. Fill of selected keys:
 | junction | 0.5% |
 
 ## Runtime and memory (pipeline process)
-Total 61.476 s; peak RSS 637.3 MiB. Peaks are the kernel high-water mark VmHWM, reset before each stage (reset succeeded).
+
+Total 82.576 s; peak RSS 520.1 MiB. Peaks are the kernel high-water mark VmHWM, reset before each stage (reset succeeded).
 
 | stage | seconds | RSS start MiB | RSS end MiB | peak RSS MiB |
 |---|---|---|---|---|
-| acquire_snapshot | 22.856 | 108.1 | 537 | 537 |
-| snapshot_integrity | 0.135 | 537 | 537 | 537 |
-| read_osm_pbf | 6.566 | 537 | 563 | 637.3 |
-| read_overture_parquet | 2.256 | 563 | 494.5 | 562.3 |
-| coordinate_checks | 0.296 | 494.9 | 494.9 | 494.9 |
-| load_postgis | 4.58 | 498.1 | 500.5 | 500.5 |
-| postgis_checks | 0.827 | 500.5 | 500.5 | 500.5 |
-| load_mongodb | 2.207 | 500.5 | 525.2 | 532.4 |
-| mongodb_checks | 0.248 | 525.2 | 525.3 | 525.3 |
-| compare_sources | 19.143 | 525.3 | 525.3 | 525.3 |
-| publish | 0.352 | 525.3 | 525.3 | 525.3 |
+| acquire_snapshot | 42.774 | 102.8 | 367.9 | 511.4 |
+| snapshot_integrity | 0.049 | 367.9 | 367.9 | 367.9 |
+| read_osm_pbf | 7.839 | 367.9 | 445.8 | 475 |
+| read_overture_parquet | 1.489 | 445.8 | 482.2 | 482.4 |
+| coordinate_checks | 0.172 | 482.7 | 482.7 | 482.7 |
+| load_postgis | 2.493 | 485.6 | 486.8 | 486.8 |
+| postgis_checks | 0.904 | 486.8 | 486.8 | 486.8 |
+| load_mongodb | 1.329 | 486.8 | 513.9 | 520.1 |
+| mongodb_checks | 0.217 | 513.9 | 514 | 514 |
+| compare_sources | 20.883 | 514 | 513.9 | 513.9 |
+| publish | 0.289 | 513.9 | 514 | 514 |
 
-Staging storage: PostGIS osm_ways 2.68 MiB, overture_segments 6.14 MiB, road_segments 3.86 MiB; MongoDB data 11.26 MiB, indexes 0.01 MiB.
+Staging size: PostGIS (table + indexes + TOAST) osm_ways 2.45 MiB, overture_segments 6.15 MiB, road_segments 3.70 MiB; MongoDB uncompressed BSON 11.26 MiB.
